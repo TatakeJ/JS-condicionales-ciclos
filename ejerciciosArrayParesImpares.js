@@ -50,7 +50,7 @@ var suma = 0;
 for (let i = 0; i < elementos.length; i++) {
     let par = elementos[i] % 2
     if (par == 0) {
-        pares.push(array[i]);
+        pares.push(pares[i]);
         console.log(`Es par: ${elementos[i]}`);
         console.log(suma = suma + elementos[i])
     } else if (par === 1 || par > 0) {
