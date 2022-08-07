@@ -5,6 +5,21 @@ for (let rango = 0; rango < 20; rango++) {
 }
 console.log(aelementos);
 
+//funcion suma
+function suma() {
+    let sum = 0;
+    let aelementos = [];
+    for (let rango = 0; rango < 20; rango++) {
+        aelementos[rango] = Math.round(Math.random() * 100);
+    }
+    for (let i = 0; i < aelementos.length; i++) {
+        return sum += aelementos[i];
+    }
+}
+suma();
+console.log(aelementos);
+console.log(suma);
+
 //suma
 let sum = 0;
 
@@ -50,7 +65,7 @@ var suma = 0;
 for (let i = 0; i < elementos.length; i++) {
     let par = elementos[i] % 2
     if (par == 0) {
-        pares.push(pares[i]);
+        pares.push(array[i]);
         console.log(`Es par: ${elementos[i]}`);
         console.log(suma = suma + elementos[i])
     } else if (par === 1 || par > 0) {
