@@ -1,13 +1,38 @@
 //1. Determinar los divisores de un número introducido por teclado
 
-var num = 2;
-for (let i = 1; i <= 100; i++) {
-    if (i % num == 0 || i == 1) {
-        console.log(`${i} es divisor de ${num}`)
-    } else {
-        console.log(`${i} no es divisor ${num}`)
+//clasico
+var divisores = [];
+var nodivisores = [];
+
+function determina(num) {
+    for (let i = 1; i <= 10; i++) {
+        if (i % num == 0 || i == 1) {
+            divisores.push(i);
+        } else {
+            nodivisores.push(i);
+        }
     }
+    console.log(`Son divisires de ${num}: ${divisores}`);
+    console.log(`No son divisires de ${num}: ${nodivisores}`);
 }
+determina(2);
+
+//flecha
+var divisores = [];
+var nodivisores = [];
+
+var determina = num => {
+    for (let i = 1; i <= 10; i++) {
+        if (i % num == 0 || i == 1) {
+            divisores.push(i);
+        } else {
+            nodivisores.push(i);
+        }
+    }
+    console.log(`Son divisires de ${num}: ${divisores}`);
+    console.log(`No son divisires de ${num}: ${nodivisores}`);
+}
+determina(2);
 
 //2. Determinar si un numero es o no es primo
 
@@ -15,42 +40,64 @@ for (let i = 1; i <= 100; i++) {
 
 //3. Determinar si un número es o no es perfecto. Un numero es perfecto si la suma de sus divisores sin incluir el propio número es igual a este
 
-var num = 6;
-var divisores = [];
 
-for (let i = 1; i <= 100; i++) {
-    if (i % num == 0 || i == 1) {
-        divisores.push(i);
-        console.log(`${i} es divisor de ${num}`)
-    } else {
-        console.log(`${i} no es divisor ${num}`)
-    }
-}
-console.log(divisores);
 
 //4. Determinar cuales y cuantos números perfectos hay entre 1 y1000?
 //5. ¿Cuáles y cuántos son los números primos comprendidos entre 1 y 1000?
 //6. Calcular el máximo de números positivos introducidos por teclado, sabiendo que metemos números hasta que introduzcamos uno negativo. El negativo no cuenta.
-do {
-    num = Math.round(Math.random() * 100);
-    console.log(num);
-} while (num > 0);
+
+//clasico
+function calculo() {
+    do {
+        num = Math.round(Math.random() * 100);
+        console.log(num);
+    } while (num > 0);
+}
+calculo();
+
+//flecha
+var calculo = () => {
+    do {
+        num = Math.round(Math.random() * 100);
+        console.log(num);
+    } while (num > 0);
+}
+calculo();
 
 //7. Encontrar un número natural n más pequeño tal que la suma de los n primeros números naturales (1 + 2 + 3 + 4…..) exceda de una cantidad (máximo) introducida por el teclado. Es decir cuantos números de la serie de los naturales debo sumar para superar el dato máximo.
 //8. Determinar cuales son los múltiplos de 5 comprendidos entre 1 y N.
 
+//clasico
 var multiplo = [];
 var nomultiplo = [];
 
-var num = 5;
-for (let i = 1; i <= 50; i++) {
-    if (i % num == 0) {
-        multiplo.push(i);
-    } else {
-        nomultiplo.push(i);
+function multiplos(num) {
+    for (let i = 1; i <= 50; i++) {
+        if (i % num == 0) {
+            multiplo.push(i);
+        } else {
+            nomultiplo.push(i);
+        }
     }
+    console.log(`multiplo de ${num}: ${multiplo}`);
 }
-console.log(`multiplo de 5: ${multiplo}`);
+multiplos(5);
+
+//flecha
+var multiplo = [];
+var nomultiplo = [];
+
+var multiplos = (num) => {
+    for (let i = 1; i <= 50; i++) {
+        if (i % num == 0) {
+            multiplo.push(i);
+        } else {
+            nomultiplo.push(i);
+        }
+    }
+    console.log(`multiplo de ${num}: ${multiplo}`);
+}
+multiplos(5);
 
 //9. Calcular la operación x n sin utilizar la función pow
 //10. Algoritmo para hallar el m.c.d de dos números m y n porel algoritmo de Euclides.

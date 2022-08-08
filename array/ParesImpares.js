@@ -65,11 +65,13 @@ var suma = 0;
 for (let i = 0; i < elementos.length; i++) {
     let par = elementos[i] % 2
     if (par == 0) {
-        pares.push(array[i]);
-        console.log(`Es par: ${elementos[i]}`);
+        pares.push(i);
         console.log(suma = suma + elementos[i])
-    } else if (par === 1 || par > 0) {
-        console.log(`Es impar: ${elementos[i]}`)
+    } else if (par == 1 || par > 0) {
+        impares.push(i);
     }
 }
+console.log(`Es par: ${pares}`);
+console.log(`Es impar: ${impares}`)
+
 // sumar pares e impares por separado

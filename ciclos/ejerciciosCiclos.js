@@ -65,9 +65,12 @@ for (let i = 1; i <= 50; i++) {
         nomultiplo.push(i);
     }
 }
-console.log(`multiplo de 5: ${multiplo}`);
+console.log(`multiplo de ${num}: ${multiplo}`);
 
 //9. Calcular la operación x n sin utilizar la función pow
+
+
+
 //10. Algoritmo para hallar el m.c.d de dos números m y n porel algoritmo de Euclides.
 //11. Solicitar 2 números al usuario e imprimir el cociente y el residuo del mayor en el menor sin utilizar la división ni el mod.
 /*12. Escribir un programa que visualice la siguiente figura, utilizando ciclos. El usuario decide cuantas líneas quiere imprimir
