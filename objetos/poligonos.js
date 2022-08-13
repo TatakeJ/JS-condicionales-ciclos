@@ -16,27 +16,41 @@ class Poligono {
     get altura() {
         return this._altura;
     }
-}
 
-class Cuadrado extends Poligono {
-    constructor(lados, base, altura) {
-        super(lados, base, altura)
+    set lados(lados) {
+        this._lados = lados;
     }
 
-    cuaArea() {
+    set base(base) {
+        this._base = base;
+    }
+
+    set altura(altura) {
+        this._altura = altura;
+    }
+
+    area() {
         return this._base * this._altura;
     }
 
-    cuaPerimetro() {
+    perimetro() {
         return 2 * (this._base += this._altura);
+    }
+}
+
+//----------------------------------------------------------------
+class Cuadrado extends Poligono {
+    constructor(lados, base, altura) {
+        super(lados, base, altura)
     }
 }
 
 const cua1 = new Cuadrado(null, 5, 5);
 console.log(cua1);
-console.log(cua1.cuaArea());
-console.log(cua1.cuaPerimetro());
+console.log(cua1.area());
+console.log(cua1.perimetro());
 
+//----------------------------------------------------------------
 class Triangulo extends Poligono {
     constructor(lados, base, altura) {
         super(lados, base, altura)
@@ -58,13 +72,10 @@ console.log(tri1);
 console.log(tri1.triArea());
 console.log(tri1.triPerimetro());
 
+//---------------------------------------------------------------
 class Rectangulo extends Poligono {
     constructor(lados, base, altura) {
         super(lados, base, altura)
-    }
-
-    rectArea() {
-        return this._base * this._altura;
     }
 
     rectPerimetro() {
@@ -74,5 +85,5 @@ class Rectangulo extends Poligono {
 
 const rect1 = new Rectangulo(null, 2, 4);
 console.log(rect1);
-console.log(rect1.rectArea());
-console.log(rect1.rectPerimetro());
+console.log(rect1.area());
+console.log(rect1.perimetro());
